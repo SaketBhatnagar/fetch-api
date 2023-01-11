@@ -8,7 +8,7 @@ body {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
-  height: 100vh;
+  /* height: 100vh; */
   background-repeat: no-repeat;
 }
 
@@ -26,7 +26,7 @@ body {
 
 section {
   display: flex;
-  padding: 50px 80px;
+  padding: 50px;
   gap: 20px;
   flex-wrap: wrap;
   /* padding-bottom: 200px; */
@@ -36,6 +36,7 @@ div {
   padding: 10px;
   width: 200px;
   transition: all 0.1s;
+  flex-grow: 1;
 }
 
 div:hover {
@@ -71,9 +72,9 @@ img {
 
 footer {
   background-color: rgb(255, 255, 255);
-  /* padding: 10px 100px; */
+
   display: flex;
-  /* flex-direction: column; */
+
   align-items: center;
   border-top: 5px solid rgba(44, 0, 44, 0.089);
   justify-content: space-between;
@@ -100,4 +101,37 @@ footer ul li a {
 
 footer ul li a:hover {
   text-decoration: underline;
+}
+
+/* 
+
+
+480px, 768px, 1024px, and 1280px
+      
+*/
+
+/* <=480px */
+@media screen and (max-width: 480px) {
+  section {
+    padding: 50px 30px;
+    gap: 0px;
+  }
+  div {
+    transform: scale(0.8);
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  section {
+    padding: 40px 30px;
+    gap: 0px;
+  }
+  div {
+    transform: scale(0.9);
+  }
+  div:hover {
+    transform: scale(1.01);
+  }
+}
+@media screen and (min-width: 769px) {
 }
